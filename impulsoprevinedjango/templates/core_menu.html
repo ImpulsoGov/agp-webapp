@@ -1,16 +1,21 @@
-<div id="bar" style="width: 100%;">
+<div id="menu">
     <div style="width: 30%; margin-left: 5%; max-width:200px;">
         <a href="{% url 'inicio' %}">
             <img src="https://i.imgur.com/tTRwJ6o.png" width="100%">
         </a>
     </div>
     
-    <div style="width: 80%; margin-left: 5%;">
+    <div style="width: 80%; margin-right: 5%; display: flex; justify-content: flex-end;">
         <p>
-            <a class="menu-item" href="{% url 'impulso' %}" target="_self" style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867">A Impulso Gov</a>
-            <a class="menu-item" href="{% url 'previne' %}" target="_self" style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867">O Previne Brasil</a>
-            <a class="menu-item" href="{% url 'indicadores' %}" target="_self" style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867">Indicadores</a>
-            <a class="menu-item" href="{% url 'dados' %}" target="_self" style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867">Adm</a>
+            <a class="menu-item" href="{% url 'impulso' %}" target="_self">A Impulso Gov</a>
+            <a class="menu-item" href="{% url 'previne' %}" target="_self">O Previne Brasil</a>
+            <a class="menu-item" href="{% url 'indicadores' %}" target="_self">Indicadores</a>
+            <a class="menu-item" href="{% url 'dados' %}" target="_self">Adm</a>
         </p>
     </div>
 </div>
+
+<!-- style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867"
+style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867"
+style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867"
+style="text-decoration:none; margin-left:2%; font-weight: bold; font-size: 18px; color:#275867" -->

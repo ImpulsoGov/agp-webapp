@@ -1,8 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+
+:root {
+    --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --main-color: #b4dc32;
+    --bs-body-font-family: var(--bs-font-sans-serif);
+    --bs-body-font-size: 1rem;
+    --bs-body-font-weight: 400;
+    --bs-body-line-height: 1.5;
+    --bs-body-color: #212529;
+    --main-padding: 0;
+    --main-margin: 0;
+    --bs-gutter-x:4.5rem;
+}
+
+
+/* Home Inicio */
+.home-title {
+    height: 70vh;
+    min-height: 600px;
+    max-height: 700px;
+    display: flex;
+    align-items: center;
+    background: var(--main-color);
+}
+
+.container,.container-fluid,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{width:100%;padding-right:var(--bs-gutter-x,.75rem);padding-left:var(--bs-gutter-x,.75rem);margin-right:auto;margin-left:auto}
+@media (min-width:576px){.container,.container-sm{max-width:540px}}
+@media (min-width:768px){.container,.container-md,.container-sm{max-width:720px}}
+@media (min-width:992px){.container,.container-lg,.container-md,.container-sm{max-width:960px}}
+@media (min-width:1200px){.container,.container-lg,.container-md,.container-sm,.container-xl{max-width:1140px}}
+@media (min-width:1400px){.container,.container-lg,.container-md,.container-sm,.container-xl,.container-xxl{max-width:1320px}}
+
+.home-title h1 {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 104px;
+    line-height: 100%;
+    letter-spacing: -0.04em;
+    color: #FFFFFF;
+    margin-top:0;
+    margin-bottom: 0.5rem;
+}
+
+.home-title .disclaimer {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #000000;
+    max-width: 724px;
+    margin-top: 40px;
+}
+
 body {
-    font-family: "PT Sans","Roboto", sans-serif;
+    font-family: 'Inter', sans-serif;
     padding: 0;
     margin: 0;
+    font-weight: 400;
+    color: #000;
 }
+
 #main {
     display: flex;
     flex: 1;
@@ -11,14 +70,15 @@ body {
 
 
 /* Menu */
-
-#bar {
+#menu {
     display: flex;
     align-items: center;
     height: 140px;
     font-weight: bold;
     font-size: 18px;
     color: #275867;
+    background: var(--main-color);
+    width: 100%;
 }
 
 #logo {
@@ -28,21 +88,29 @@ body {
     /* height: 82px; */
 }
 
-#menu-itens{
-    margin-left: 40%;
+.menu-item {
+    color: #141919;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 14.52px;
+    font-weight: 700;
+    font-style: normal;
+    padding-right: 32px;
     width: 100%;
 }
-@media screen and (max-width: 1024px) {
+
+@media screen and (max-width: 1024px) { */
     #menu-itens {
         margin-left: 20%;
     }
 }
-.menu-item {
+/* .menu-item {
     margin-left: 10%;
     text-decoration:none;
-}
+} */
 .menu-item:hover{
-    color:#e24717;
+    color: white;
 }
 
 
@@ -107,7 +175,6 @@ body {
 
 
 /* Conteudo 2 */
-
 #content2 {
     display: flex;
     align-items: center;
@@ -120,7 +187,6 @@ body {
 }
 
 /* Rodapé */
-
 #footer{
     font-size: 3vw;
     font-weight: bolder;
@@ -132,11 +198,6 @@ body {
     text-align: center;
     height: 550px;
 }
-#meme{
-    height: 30%;
-    width: 30%;
-}
-
 
 
 
