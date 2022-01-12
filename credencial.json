@@ -7,24 +7,7 @@
            "PORT":"5432",
            "DATABASE":"postgres"
         }
-    ],
-    "impulsogov-analitico":[
-       {
-          "USERNAME":"postgres",
-          "PASSWORD":"1009-ImPuLsO",
-          "HOSTNAME":"35.239.239.250",
-          "PORT":"5432",
-          "DATABASE":"piraju"
-       }
-   ],
-   "impulso-producao":[
-       {
-          "USERNAME":"postgres",
-          "PASSWORD":"1009-ImPuLsO",
-          "HOSTNAME":"34.68.68.223",
-          "PORT":"5432",
-          "DATABASE":"postgres"
-       }
+    ]
     ]
  }
   
