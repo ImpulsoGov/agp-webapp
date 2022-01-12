@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from django.http import HttpResponse
-from .view import Inicio, DadosAdm, Graficos, Impulso, Indicadores, Previne
+from .view import Inicio, DadosAdm, Graficos, Impulso, Indicadores, Guias
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -31,6 +31,6 @@ urlpatterns = [
     path('grafico/', Graficos.as_view(), name='graficos'),
     path('', Inicio.as_view(), name='inicio'),
     path('impulso/', Impulso.as_view(), name='impulso'),
-    path('previne/', Previne.as_view(), name='previne'),
+    path('guias/', Guias.as_view(), name='guias'),
     path('indicadores/', Indicadores.as_view(), name='indicadores')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

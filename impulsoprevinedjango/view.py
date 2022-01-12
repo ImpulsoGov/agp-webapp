@@ -35,8 +35,8 @@ class Impulso(TemplateView):
 class Indicadores(TemplateView):
     template_name = 'indicadores.html'
 
-class Previne(TemplateView):
-    template_name = 'previne.html'
+class Guias(TemplateView):
+    template_name = 'guias.html'
 
 
 class DadosAdm(TemplateView): # new
