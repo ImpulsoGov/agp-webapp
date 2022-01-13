@@ -29,14 +29,22 @@ def readQuery(query):
 class Inicio(TemplateView):
     template_name = 'inicio.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(Inicio, self).get_context_data(**kwargs)
+        context['nome_pagina'] = 'Inicio'
+        return context
+
 class Impulso(TemplateView):
     template_name = 'impulso.html'
 
-class Indicadores(TemplateView):
-    template_name = 'indicadores.html'
-
 class Guias(TemplateView):
     template_name = 'guias.html'
+
+class Paineis(TemplateView):
+    template_name = 'paineis.html'
+
+class Login(TemplateView):
+    template_name = 'login.html'
 
 
 class DadosAdm(TemplateView): # new

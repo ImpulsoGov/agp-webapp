@@ -1,17 +1,16 @@
-<div class="menu" id="menu">
+<div class="menu" id="menu" style="background-color: white; border-bottom: 1px solid #D1D1D2;">
     <div class="menu-logo">
         <a href="{% url 'inicio' %}">
-            <img src="https://i.imgur.com/ULdEoYk.png">
+            <img src="https://i.imgur.com/kj1sII7.png">
             <p>AGP</p>
         </a>
     </div>
     <div style="width: 80%; margin-right: 5%; display: flex; justify-content: flex-end;">
         <p>
             <a></a>
-            <a class="menu-item" href="{% url 'impulso' %}" target="_self">A Impulso Gov</a>
-            <a class="menu-item" href="{% url 'guias' %}" target="_self">Guias</a>
-            <a class="menu-item" href="{% url 'indicadores' %}" target="_self">Painéis de Indicadores</a>
-            <a class="menu-item" href="{% url 'dados' %}" target="_self">Login</a>
+            <a class="menu-item-core" href="{% url 'guias' %}" target="_self">Guias</a>
+            <a class="menu-item-core" href="{% url 'paineis' %}" target="_self">Painéis de Indicadores</a>
+            <a class="menu-item-core" href="{% url 'login' %}" target="_self">Login</a>
             <a href="javascript:void(0);" class="iconmenu" onclick="menuIcon()" style="color: white; font-size:36px;"><i class="fa fa-bars"></i></a>
         </p>
     </div>

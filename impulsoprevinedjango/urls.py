@@ -17,20 +17,21 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from django.http import HttpResponse
-from .view import Inicio, DadosAdm, Graficos, Impulso, Indicadores, Guias
+from .view import Inicio, DadosAdm, Graficos, Impulso, Paineis, Guias, Login
 from django.conf.urls.static import static
 from django.conf import settings
 
 
-def home(request):
-    return HttpResponse('Welcome to the Tinyapp\'s Homepage!')
+# def home(request):
+#     return HttpResponse('Welcome to the Tinyapp\'s Homepage!')
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('dados/', DadosAdm.as_view(), name='dados'),
-    path('grafico/', Graficos.as_view(), name='graficos'),
     path('', Inicio.as_view(), name='inicio'),
-    path('impulso/', Impulso.as_view(), name='impulso'),
+    # path('admin/', admin.site.urls),
+    # path('dados/', DadosAdm.as_view(), name='dados'),
+    # path('grafico/', Graficos.as_view(), name='graficos'),
+    # path('impulso/', Impulso.as_view(), name='impulso'),
     path('guias/', Guias.as_view(), name='guias'),
-    path('indicadores/', Indicadores.as_view(), name='indicadores')
+    path('paineis/', Paineis.as_view(), name='paineis'),
+    path('login/', Login.as_view(), name='login')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

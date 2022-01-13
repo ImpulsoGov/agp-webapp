@@ -1,14 +1,9 @@
 {% load static %}
-<head>
-    <title>Inicio | Impulso Previne</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="{% static 'home.css' %}">
-    <meta charset="utf-8">
-</head>
+{% include 'core_header.html' with titulo="Inicio" %}
 
 <body>
     <div id="main">
-        {% include 'core_menu.html' %}
+        {% include 'menu_inicio.html' %}
         
         {% include 'core_header_home.html' %}
         
