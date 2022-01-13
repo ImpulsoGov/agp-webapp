@@ -29,11 +29,6 @@ def readQuery(query):
 class Inicio(TemplateView):
     template_name = 'inicio.html'
 
-    def get_context_data(self, **kwargs):
-        context = super(Inicio, self).get_context_data(**kwargs)
-        context['nome_pagina'] = 'Inicio'
-        return context
-
 class Impulso(TemplateView):
     template_name = 'impulso.html'
 
@@ -46,6 +41,13 @@ class Paineis(TemplateView):
 class Login(TemplateView):
     template_name = 'login.html'
 
+class Perfil(TemplateView): # new
+    template_name = 'perfil.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Perfil, self).get_context_data(**kwargs)
+        context['url'] = "https://sites.google.com/impulsogov.org/agpsaude-teste/inicio/"+context['municipio']
+        return context
 
 class DadosAdm(TemplateView): # new
     form_class = DadosBanco

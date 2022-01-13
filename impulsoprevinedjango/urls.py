@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
 from django.http import HttpResponse
-from .view import Inicio, DadosAdm, Graficos, Impulso, Paineis, Guias, Login
+from .view import Inicio, DadosAdm, Graficos, Impulso, Paineis, Guias, Login, Perfil
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -31,6 +31,7 @@ urlpatterns = [
     # path('dados/', DadosAdm.as_view(), name='dados'),
     # path('grafico/', Graficos.as_view(), name='graficos'),
     # path('impulso/', Impulso.as_view(), name='impulso'),
+    path('perfil/<slug:municipio>/', Perfil.as_view(), name='perfil'),
     path('guias/', Guias.as_view(), name='guias'),
     path('paineis/', Paineis.as_view(), name='paineis'),
     path('login/', Login.as_view(), name='login')
