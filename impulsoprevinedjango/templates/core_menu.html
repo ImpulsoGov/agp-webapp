@@ -1,7 +1,8 @@
+{% load static %}
 <div class="menu" id="menu" style="background-color: white; border-bottom: 1px solid #D1D1D2;">
     <div class="menu-logo">
         <a href="{% url 'inicio' %}">
-            <img src="https://i.imgur.com/kj1sII7.png">
+            <img src="{% static 'images/logo-preto.png' %}">
             <p>AGP</p>
         </a>
     </div>
@@ -11,7 +12,7 @@
             <a class="menu-item-core" href="{% url 'guias' %}" target="_self">Guias</a>
             <a class="menu-item-core" href="{% url 'paineis' %}" target="_self">Painéis</a>
             <a class="menu-item-core" href="{% url 'login' %}" target="_self">Login</a>
-            <a href="javascript:void(0);" class="iconmenu" onclick="menuIcon()" style="color: white; font-size:36px;"><i class="fa fa-bars"></i></a>
+            <!-- <a href="javascript:void(0);" class="iconmenu" onclick="menuIcon()" style="color: white; font-size:36px;"><i class="fa fa-bars"></i></a> -->
         </p>
     </div>
 </div>
