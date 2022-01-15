@@ -17,7 +17,9 @@
         </div>
 
         <div class="footer">
-            <img href="{% url 'iniciativas' %}" src="{% static 'images/Paineisiniciativas.png' %}">
+            <a href="{% url 'iniciativas' %}">
+                <img src="{% static 'images/PaineisPainelfull.png' %}">
+            </a>
         </div>
 
         {% include 'realizacao.html' %}
