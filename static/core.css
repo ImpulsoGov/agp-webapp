@@ -28,10 +28,21 @@
     letter-spacing: -0.02em;
     color: #000000;
     text-align:center;
-    padding: 20px;
+    padding: 0px;
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
+.footer img {
+    width: 100%;
+    padding: 0px;
+}
+
+.row {
+    padding-top: 30px;
+    display: inherit;
+}
 
 /* Home Inicio */
 .home-title {
@@ -214,7 +225,7 @@ body {
 
 /* Conteudo 1 */
 
-#content1 {
+/* #content1 {
     display: flex;
     position: relative;
     flex-direction: row;
@@ -244,12 +255,13 @@ body {
 
 #text_content1 {
     margin: 0;
-}
+} */
+
 
 
 
 /* Conteudo 2 */
-#content2 {
+/* #content2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -258,7 +270,7 @@ body {
     color: rgb(255, 255, 255);
     padding: 40px;
     font-size: 3vw;
-}
+} */
 
 
 

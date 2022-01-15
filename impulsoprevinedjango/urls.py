@@ -33,6 +33,6 @@ urlpatterns = [
     # path('impulso/', Impulso.as_view(), name='impulso'),
     path('perfil/<slug:municipio>/', Perfil.as_view(), name='perfil'),
     path('guias/', Guias.as_view(), name='guias'),
-    path('paineis/', Paineis.as_view(), name='paineis'),
+    path('farol/', Paineis.as_view(), name='farol'),
     path('login/', Login.as_view(), name='login')
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
