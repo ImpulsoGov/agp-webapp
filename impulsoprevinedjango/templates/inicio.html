@@ -6,19 +6,39 @@
         {% include 'menu_inicio.html' %}
         
         {% include 'core_header_home.html' %}
-        
-        <div id="content1">
-            <div id="img_content1"><img src="https://i.imgur.com/kszzlo0.png" width="364px" height="411px"  style="object-fit: cover;"></div>
-            <div id="content1_1">
-                <p id="title_content1"><b>Titulo</b></p>
-                <p id="text_content1">Textotexto Texto Texto Textotexto Texto Texto Textotexto Texto Texto Texto textoTexto Texto Textotexto Texto Texto Textotexto Texto Texto</p>
+        <div class="row">
+            <div class="chamada" style="width: 60%; float: left; padding: 30px; margin-left:40px;">
+                <p>
+        A atenção primária em saúde tem como finalidade ser a coordenadora e ordenadora do 
+        cuidado dentro do sistema único de saúde (SUS). É a porta de entrada do usuário no 
+        sistema e tem como finalidade a resolutividade das demandas da comunidade. 
+        <br><br>
+        Atualmente trabalhamos com duas frentes principais: <b>Qualidade do serviço</b> onde o objetivo é apoiar  a tomada de decisão de 
+        forma assertiva com base em indicadores de qualidade e desempenho à luz do Previne 
+        Brasil, a nova política de financiamento da APS.
+        <b>Acesso e Território</b>, cujo objetivo é trabalhar sob a lógica da organização 
+        da estratégia saúde da família e a oferta de serviços a luz do conhecimento aprofundado 
+        de suas características sociodemográficas e seu território.
+        <br><br>
+        Conheça nosso trabalho e diagnóstico dos municipios no Farol APS.
+        <br><br>
+        <a href="{% url 'farol' %}"><button class="botao">Ver agora</button></a>
+                </p>
+            </div>
+            <div style="width: 40%; float: left; padding: 10px; margin: 60px;">
+                <iframe src="https://datawrapper.dwcdn.net/6XxRb/1/" scrolling="yes" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="556"></iframe>
             </div>
         </div>
-        <div id="content2">
-            <p>makdnckjdsnckdsjbcskdncnsjdkcndskjcnsdkjcnsdcnkjdsncjsn dckjsdckjndskjcnsdkjnckjsncjkdsncjkd</p>
+
+        <div class="footer">
+            <a href="{% url 'iniciativas' %}">
+                <img src="{% static 'images/Paineispainelfullblue.png' %}">
+            </a>
         </div>
 
-        {% include 'core_footer.html' %}
+        {% include 'realizacao.html' %}
+
+        {% include 'menu_inicio.html' %}
     </div>
 
 <!-- <script>
