@@ -32,8 +32,8 @@ class Inicio(TemplateView):
 class Impulso(TemplateView):
     template_name = 'impulso.html'
 
-class Guias(TemplateView):
-    template_name = 'guias.html'
+class Iniciativas(TemplateView):
+    template_name = 'iniciativas.html'
 
 class Paineis(TemplateView):
     template_name = 'paineis.html'
