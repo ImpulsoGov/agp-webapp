@@ -4,6 +4,7 @@
     --bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     --bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
     --main-color: #b4dc32;
+    --second-color: #00008d;
     --bs-body-font-family: var(--bs-font-sans-serif);
     --bs-body-font-size: 1rem;
     --bs-body-font-weight: 400;
@@ -12,9 +13,35 @@
     --main-padding: 0;
     --main-margin: 0;
     --bs-gutter-x:4.5rem;
+    --font-size: 18px;
+}
+
+.chamada p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #000000;
 }
 
 
+.row .chamada .botao {
+    position: relative;
+    background-color: var(--main-color);
+    border: none;
+    font-size: 18px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+}  
+
+.row .chamada .botao:hover{
+    background-color: var(--second-color);
+    color: #FFFFFF;
+}
 
 /* Rodapé */
 .footer{
@@ -40,7 +67,7 @@
 }
 
 .row {
-    padding-top: 30px;
+    padding-top: 80px;
     display: inherit;
 }
 
@@ -106,7 +133,6 @@ body {
     height: 100px;
     font-weight: bold;
     font-size: 18px;
-    color: #275867;
     background: var(--main-color);
     width: 100%;
 }
@@ -126,7 +152,7 @@ body {
 }
 
 .menu-logo p {
-    color: #141919;
+    color: var(--second-color);
     text-transform: uppercase;
     font-size: 16px;
     line-height: 14.52px;
@@ -168,7 +194,7 @@ body {
 } */
 
 .menu-item {
-    color: #141919;
+    color: var(--second-color);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;

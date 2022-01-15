@@ -7,18 +7,32 @@
         
         {% include 'core_header_home.html' %}
         <div class="row">
-            <div style="width: 50%; float: left; padding: 10px; margin-left:70px;">
-                <iframe title="" aria-label="Map" id="datawrapper-chart-6XxRb" src="https://datawrapper.dwcdn.net/6XxRb/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="556"></iframe>
+            <div class="chamada" style="width: 60%; float: left; padding: 30px; margin-left:40px;">
+                <p>
+        A atenção primária em saúde tem como finalidade ser a coordenadora e ordenadora do 
+        cuidado dentro do sistema único de saúde (SUS). É a porta de entrada do usuário no 
+        sistema e tem como finalidade a resolutividade das demandas da comunidade. 
+        <br><br>
+        Atualmente trabalhamos com duas frentes principais: <b>Qualidade do serviço</b> onde o objetivo é apoiar  a tomada de decisão de 
+        forma assertiva com base em indicadores de qualidade e desempenho à luz do Previne 
+        Brasil, a nova política de financiamento da APS.
+        <b>Acesso e Território</b>, cujo objetivo é trabalhar sob a lógica da organização 
+        da estratégia saúde da família e a oferta de serviços a luz do conhecimento aprofundado 
+        de suas características sociodemográficas e seu território.
+        <br><br>
+        Conheça nosso trabalho e diagnóstico dos municipios no Farol APS.
+        <br><br>
+        <a href="{% url 'farol' %}"><button class="botao">Ver agora</button></a>
+                </p>
             </div>
-            <div style="width: 50%; float: left; padding: 10px;">
-                <h2>Column 2</h2>
-                <p>Some text..</p>
+            <div style="width: 40%; float: left; padding: 10px; margin: 60px;">
+                <iframe src="https://datawrapper.dwcdn.net/6XxRb/1/" scrolling="yes" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="556"></iframe>
             </div>
         </div>
 
         <div class="footer">
             <a href="{% url 'iniciativas' %}">
-                <img src="{% static 'images/PaineisPainelfull.png' %}">
+                <img src="{% static 'images/Paineispainelfullblue.png' %}">
             </a>
         </div>
 
