@@ -2,6 +2,8 @@
 # Usado para encontrar urls
 from django.urls import reverse_lazy, reverse
 from django.views.generic import TemplateView
+from django.shortcuts import render
+# from validators import slug
 from .formulario import DadosBanco
 import json
 from sqlalchemy import create_engine
@@ -9,6 +11,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from pandas.io import sql
 from django.http import HttpResponseRedirect, HttpResponse
 from django.views.decorators.csrf import csrf_exempt
+import pandas as pd
 
 
 def readQuery(query):
@@ -43,10 +46,18 @@ class Login(TemplateView):
 
 class Perfil(TemplateView): # new
     template_name = 'perfil.html'
+    # context_object_name = 'iniciativas_links'
 
     def get_context_data(self, **kwargs):
         context = super(Perfil, self).get_context_data(**kwargs)
-        context['url'] = "https://sites.google.com/impulsogov.org/agpsaude-teste/inicio/"+context['municipio']
+        iniciativas = pd.read_csv('https://docs.google.com/spreadsheets/d/' + '196uk3iKUF5g1bsjsinwsZ5RY91-7zGk_llSakfGApls' + '/export?gid=1427879285&format=csv', index_col=0)
+        slugs = pd.read_csv('static/files/slugs.csv')
+        iniciativas = iniciativas.merge(slugs, left_on='IBGE', right_on='id_sus')
+        iniciativas = iniciativas[(iniciativas.slug == context['municipio'])]
+        context['nome_municipio'] = iniciativas['Município'].to_list()[0]
+        context['eixos'] = iniciativas['Eixos'].unique()
+        context['tematicas'] = iniciativas['Tematicas'].unique()
+        context['iniciativas'] = iniciativas
         return context
 
 class DadosAdm(TemplateView): # new

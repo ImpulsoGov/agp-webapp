@@ -4,10 +4,24 @@
 <body>
     <div id="main">
         {% include 'core_menu.html' %}
-        <div>
-            <p align="center"><iframe width="70%" height="4100" src="{{ url }}" frameborder="0" style="border:0" allowfullscreen=""></iframe></p>
+        <div class="container" style="padding: 60 60 60 20px;">
+            <h1 style="color: #00008d;">{{ nome_municipio }}</h1>
+            <hr>   
+            {% for eixo in eixos %}
+            <h2>{{ eixo }}</h2>
+            <br>
+                {% for index, row in iniciativas.iterrows %}
+                    {% if row.Eixos == eixo %}
+                    <a href="{{row.solucao_link}}">
+                        <p>
+                            {{row.Tematicas}} - {{row.solucao_nome}}
+                        </p>
+                    </a>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
         </div>
-        {% include 'core_footer.html' %}
+        {% include 'core_menu.html' %}
     </div>
   </body>
 
