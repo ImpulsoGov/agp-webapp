@@ -6,34 +6,26 @@
     <hr>
     <div class="rowcards">
         <div class="columncard">
-            <a>
-                <div class="card">
-                <img src="{% static 'images/guiacard.png' %}" style="width:100%">
+            <a target="_blank" href="{% static 'files/guia-previne.pdf' %}">
+                <div class="card" style="height: 350px;">
+                <img src="{% static 'images/guiacard.png' %}" style="height: 245px; width:170px;">
                     <br><br><p>Guia Previne Brasil</p>
                 </div>
             </a>
         </div>
         <div class="columncard">
-            <a>
-                <div class="card">
-                    <img src="{% static 'images/guiacard.png' %}" style="width:100%">
-                    <br><br><p>Guia Previne Brasil</p>
+            <a target="_blank" href="{% static 'files/guia-acompanhamento-cadastro.pdf' %}">
+                <div class="card" style="height: 350px;">
+                    <img src="{% static 'images/guiacadcard.png' %}" style="height: 245px; width:170px;">
+                    <br><br><p>Guia Acompanhamento Cadastros SISAB</p>
                 </div>
             </a>
         </div>
         <div class="columncard">
-            <a>
-                <div class="card">
-                    <img src="{% static 'images/guiacard.png' %}" style="width:100%">
-                    <br><br><p>Guia Previne Brasil</p>
-                </div>
-            </a>
-        </div>
-        <div class="columncard">
-            <a>
-                <div class="card">
-                    <img src="{% static 'images/guiacard.png' %}" style="width:100%">
-                    <br><br><p>Guia Previne Brasil</p>
+            <a target="_blank" href="{% static 'files/guia-correcao-cadastro.pdf' %}">
+                <div class="card" style="height: 350px;">
+                    <img src="{% static 'images/corr_Cad.png' %}" style="height: 245px; width:170px;">
+                    <br><br><p>Formação Correção de Cadastros</p>
                 </div>
             </a>
         </div>
@@ -41,6 +33,49 @@
     <br><br><br><br>
     <h4>Ferramentas</h4>
     <hr>
-    <iframe src="https://impulsosaudemental.org/caps-resumo/" style="width: 100%; height: 500px;"></iframe>        
+    <div class="rowGrid">
+        <div class="columnGrid" onclick="openTab('b1');" style="background:green;">
+            Indicadores de Desempenho
+        </div>
+        <div class="columnGrid" onclick="openTab('b2');" style="background:blue;">
+            Cadastros Individuais
+        </div>
+        <div class="columnGrid" onclick="openTab('b3');" style="background:red;">
+            Cadastros Inválidos
+        </div>
+    </div>
+    <div id="b1" class="containerTab" style="display:none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <iframe src="https://datastudio.google.com/embed/reporting/8dced745-e586-4311-99d1-fc50d7dcea7d/page/p_vgk9r9igoc"" style="width: 100%; height: 800px;"></iframe>
+      </div>
+      
+      <div id="b2" class="containerTab" style="display:none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <iframe src="https://datastudio.google.com/embed/reporting/6b327ced-a41e-4975-acfc-5092daa10418/page/p_8mefougfrc" style="width: 100%; height: 800px;"></iframe>
+      </div>
+      
+      <div id="b3" class="containerTab" style="display:none;">
+        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <iframe src="https://datastudio.google.com/embed/reporting/25cbf8d9-114e-4e90-8f9e-181c0ff82414/page/p_vuvby50frc" style="width: 100%; height: 800px;"></iframe>
+      </div>        
 </div>
 {% endif %}
+
+{% if id_tematica == "comunicacao-risco"  %}
+<div style="padding:30px;">
+    <h4>Guias</h4>
+    <hr>
+    <div class="rowcards">
+        <div class="columncard">
+            <a target="_blank" href="https://www.canva.com/design/DAE1ucJRyso/raLl0yYaXgZTsHPtSUTp3g/view?utm_content=DAE1ucJRyso&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink">
+                <div class="card">
+                <img src="{% static 'images/card-covid.png' %}" style="width:100%">
+                    <br><br><p>Comunicação COVID-19 atualização variantes</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- COMUNICAÇÃO DE RISCO -->
